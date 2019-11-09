@@ -1,0 +1,4 @@
+## Interface: 11302
+## Title: TradeSkillWhisper
+## Notes: Other players can search your recipes by whispering commands to you
+TradeSkillWhisper.lua
