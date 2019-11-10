@@ -3,11 +3,8 @@ local function tradeSkillWhisperEventHandler(self, event, msg, sender)
         local count = GetNumCrafts()
         if count > 0 then
             for i=1, count do
-                local name, _, type, _, _ = GetCraftInfo(i);
-                print(name, type)
-                if (name and type ~= "header") then
-                    DEFAULT_CHAT_FRAME:AddMessage("Found: "..name);
-                end
+                local link = GetCraftItemLink(i);
+                DEFAULT_CHAT_FRAME:AddMessage(link);
             end
         else
             print("You must open enchanting window")
