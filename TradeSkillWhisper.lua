@@ -31,6 +31,7 @@ end
 local function tradeSkillWhisperEventHandler(self, event, msg, sender)
     if event == "CHAT_MSG_WHISPER" then
         local cmd, term = string.split(' ', msg)
+        cmd = string.lower(cmd)
         if cmd == "!list" then
             showRecipeLinks(sender)
         elseif cmd == "!search" then
